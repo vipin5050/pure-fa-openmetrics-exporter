@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: quay.io/purestorage/pure-fa-om-exporter
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 9490
+  nodePort: 30490
+
+resources: {}
+
+namespace: monitoring
+

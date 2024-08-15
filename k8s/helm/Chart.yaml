@@ -1,0 +1,6 @@
+apiVersion: v2
+name: pure-fa-exporter
+description: A Helm chart for Pure Storage FlashArray OpenMetrics Exporter
+version: 0.1.0
+appVersion: "latest"
+

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "pure-fa-exporter.fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ include "pure-fa-exporter.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: {{ include "pure-fa-exporter.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "pure-fa-exporter.name" . }}
+    spec:
+      containers:
+      - name: pure-fa-om-exporter
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        args:
+          - '--address=0.0.0.0'
+          - '--port={{ .Values.service.port }}'
+        ports:
+        - name: web
+          containerPort: {{ .Values.service.port }}
+      restartPolicy: Always

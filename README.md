@@ -29,6 +29,10 @@ Detailed examples of how to deploy several configurations either using Docker or
 
 ```shell
 docker pull quay.io/purestorage/pure-fa-om-exporter:<release>
+
+or
+
+docker pull vipin5050/ps-exporter:latest
 ```
 
 where the release tag follows the semantic versioning.
@@ -39,6 +43,7 @@ where the release tag follows the semantic versioning.
 
 Binary downloads of the exporter can be found on the [Releases](https://github.com/PureStorage-OpenConnect/pure-fa-openmetrics-exporter/releases/latest) page.
 
+or its in the repository also as "pure-fa-om-exporter"
 ---
 ### Local development
 
