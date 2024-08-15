@@ -41,9 +41,7 @@ where the release tag follows the semantic versioning.
 
 #### Binaries
 
-Binary downloads of the exporter can be found on the [Releases](https://github.com/PureStorage-OpenConnect/pure-fa-openmetrics-exporter/releases/latest) page.
-
-or its in the repository also as "pure-fa-om-exporter"
+Binary downloads of the exporter can be found on the [Releases](https://github.com/PureStorage-OpenConnect/pure-fa-openmetrics-exporter/releases/latest) page or its in the repository also as "pure-fa-om-exporter"
 ---
 ### Local development
 
